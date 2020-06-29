@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2eQ-c2-sh4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab View Controller-->
+        <scene sceneID="ODS-7q-bZP">
+            <objects>
+                <tabBarController id="2eQ-c2-sh4" customClass="TabViewController" customModule="Bespoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="PWl-4X-xZc">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eX2-gy-4Yq" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Ia2-Ay-K1f">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="2d8-zz-Fl7" customClass="WebViewController" customModule="Bespoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="loy-vM-WfJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgj-sN-6zr">
+                                <rect key="frame" x="352" y="792" width="46" height="70"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <state key="normal" title="→"/>
+                                <connections>
+                                    <action selector="forward:" destination="2d8-zz-Fl7" eventType="touchUpInside" id="ZUM-5y-7kd"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gao-as-D8x">
+                                <rect key="frame" x="16" y="792" width="46" height="70"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                <state key="normal" title="←"/>
+                                <connections>
+                                    <action selector="back:" destination="2d8-zz-Fl7" eventType="touchUpInside" id="SYa-On-7gc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Gao-as-D8x" firstAttribute="leading" secondItem="2uV-8x-SgJ" secondAttribute="leading" constant="16" id="0xd-h1-KUU"/>
+                            <constraint firstItem="2uV-8x-SgJ" firstAttribute="bottom" secondItem="Gao-as-D8x" secondAttribute="bottom" id="JfD-0e-jji"/>
+                            <constraint firstItem="2uV-8x-SgJ" firstAttribute="bottom" secondItem="mgj-sN-6zr" secondAttribute="bottom" id="m6g-oI-fDy"/>
+                            <constraint firstItem="2uV-8x-SgJ" firstAttribute="trailing" secondItem="mgj-sN-6zr" secondAttribute="trailing" constant="16" id="uEk-qy-TVK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2uV-8x-SgJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Gao-as-D8x" id="vbE-NH-vmh"/>
+                        <outlet property="forwardButton" destination="mgj-sN-6zr" id="MI3-E6-iuK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1y-Z1-6UW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="814" y="0.0"/>
+        </scene>
+    </scenes>
+</document>
